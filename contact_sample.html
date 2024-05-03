@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #5c2808;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-scrolled {
+            background-color: #000000 !important; /* Change to desired background color */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar-scrolled .navbar-brand,
+        .navbar-scrolled .navbar-nav .nav-link {
+            color: #fff !important; /* Change to desired text color */
+        }
+
+        /* Contact section styles */
+        .contact-section {
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .btn 
+        {
+            display: inline-block;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover
+        {
+            border-color: #5c2808;
+            background-color: #ffffff;
+            color: #000;
+        }
+        .btn:focus, .btn:active 
+        {
+            outline: #000;
+            box-shadow: none; /* Remove the default box-shadow */
+            border-color: #000; /* Change the border color to desired color */
+        }
+
+        /* Circular login icon styles */
+        .login-icon {
+            background-color: transparent;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 24px;
+            margin-left: 0px;
+        }
+
+        .login-icon i {
+            font-size: 10px;
+        }
+        .login-icon-scrolled{
+            color: white !important;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 5px;
+            width: 100%;
+            background-color: #5c2808; 
+            color: #fff;
+            height: 40px; 
+            line-height: 40px; /* Center content vertically */
+            text-align: center; /* Center text horizontally */
+            z-index: 999; 
+        }
+
+        .footer p {
+             margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="try_4.html"></a>
+            <a href="try_4.html"><img src="logo_sample_white.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="try_4.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products_sample.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus_sample.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_sample.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_sample.html">
+                            <div class="login-icon"><i class="fas fa-user"></i></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mycart_sample.html">
+                            <i class="fas fa-shopping-cart"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <br>
+            <div class="contact-info">
+                <i>
+                <p><b>Email:</b> itsbhargavisharma@gmail.com</p>
+                <p><b>Phone:</b> +91 95600-6xxxx</p>
+                <p><b>Address:</b> Lovely Professional University, Jalandhar, Punjab</p>
+                </i>
+            </div>
+            <p><b>For any inquiries, please fill out the form below</b></p>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-light text-center">
+        <div class="container">
+            <p>&copy; 2024 Candid | Phagwara, Punjab | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const navbarBrand = document.querySelector('.navbar-brand');
+            const login = document.querySelector('.login-icon');
+
+            if (window.scrollY > 0) {
+                navbar.classList.add('navbar-scrolled');
+                login.classList.add('login-icon-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                login.classList.remove('login-icon-scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

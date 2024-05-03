@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            background-color: #550707;
+            padding: 20px 0;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            color: #ffffff !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-scrolled {
+            background-color: black !important; /* Change to desired background color */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar-scrolled .navbar-brand,
+        .navbar-scrolled .navbar-nav .nav-link {
+            color: #fff !important; /* Change to desired text color */
+        }
+
+        /* Product section styles */
+        .product-section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .product-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .product-card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .product-card img {
+            width: 200px; /* Adjust the width to your desired size */
+            height: 200px; /* Adjust the height to your desired size */
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: #777;
+        }
+
+        /* Circular login icon styles */
+        .login-icon {
+            background-color: transparent;
+            color: #ffffff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 24px;
+            margin-left: 0px;
+        }
+
+        .login-icon i {
+            font-size: 10px;
+        }
+        .login-icon-scrolled{
+            color: white !important;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 5px;
+            width: 100%;
+            background-color: #000; 
+            color: #fff;
+            height: 40px; 
+            line-height: 40px; /* Center content vertically */
+            text-align: center; /* Center text horizontally */
+            z-index: 999; 
+        }
+
+        .footer p {
+             margin: 0;
+        }
+        .btn 
+        {
+            display: inline-block;
+            background-color: #000000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover
+        {
+            background-color: #ffffff;
+            color: #000000;
+            border-color: #550707;
+            border-width: 1.5px;            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="try_4.html"></a>
+            <a href="try_4.html"><img src="logo_sample_white.png" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="try_4.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products_sample.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus_sample.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_sample.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_sample.html">
+                            <div class="login-icon"><i class="fas fa-user"></i></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mycart_sample.html">
+                            <i class="fas fa-shopping-cart"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="eyeliner.jpeg" alt="Product 1">
+                        <h3>Eyeliner</h3>
+                        <p>Color - Black</p>
+                        <p>Rs. 250</p>
+                        <button class="btn" onclick="addToCart('Eyeliner', 'Color - Black')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="mascara.jpeg" alt="Product 2">
+                        <h3>Mascara</h3>
+                        <p>Color - Black</p>
+                        <p>Rs. 250</p>
+                        <button class="btn" onclick="addToCart('Mascara', 'Color - Black')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="eyeshadow.jpeg" alt="Product 3">
+                        <h3>Eye Shadow Palette</h3>
+                        <p>Color - Pastel</p>
+                        <p>Rs. 300</p>
+                        <button class="btn" onclick="addToCart('Eye Shadow Palette', 'Color - Pastel')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="red.jpeg" alt="Product 4">
+                        <h3>Lipstick</h3>
+                        <p>Shade - Red</p>
+                        <p>Rs. 400</p>
+                        <button class="btn" onclick="addToCart('Lipstick', 'Shade - Red')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="4.jpeg" alt="Product 5">
+                        <h3>Lipstick</h3>
+                        <p>Shade - Baby Pink</p>
+                        <p>Rs. 400</p>
+                        <button class="btn" onclick="addToCart('Lipstick', 'Shade - Baby Pink')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="nude.jpeg" alt="Product 6">
+                        <h3>Lipstick</h3>
+                        <p>Shade - Dark Red</p>
+                        <p>Rs. 400</p>
+                        <button class="btn" onclick="addToCart('Lipstick', 'Shade - Nude')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="3.jpeg" alt="Product 7">
+                        <h3>Foundation</h3>
+                        <p>Skin Tone - 3</p>
+                        <p>Rs. 450</p>
+                        <button class="btn" onclick="addToCart('Foundation', 'Skin Tone - 3')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="concealer.jpeg" alt="Product 8">
+                        <h3>Concealer</h3>
+                        <p>Skin Tone - 2</p>
+                        <p>Rs. 470</p>
+                        <button class="btn" onclick="addToCart('Concealer', 'Skin Tine - 2')">Add To Cart</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <img src="contour.jpeg" alt="Product 9">
+                        <h3>Contour</h3>
+                        <p>Skin Tone - 1</p>
+                        <p>Rs. 470</p>
+                        <button class="btn" onclick="addToCart('Contour', 'Skin Tone - 1')">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-light text-center">
+        <div class="container">
+            <p>&copy; 2024 Candid | Phagwara, Punjab | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            const navbarBrand = document.querySelector('.navbar-brand');
+            const login = document.querySelector('.login-icon');
+
+            if (window.scrollY > 0) {
+                navbar.classList.add('navbar-scrolled');
+                login.classList.add('login-icon-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+                login.classList.remove('login-icon-scrolled');
+            }
+        });
+    </script>
+    <script>
+        // Function to handle the "Add to Cart" button click event
+        function addToCart(productName, productDescription) {
+            // Get the existing cart items from local storage or initialize an empty array
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+            // Push the new product details to the cart items array
+            cartItems.push({
+                name: productName,
+                description: productDescription
+            });
+    
+            // Save the updated cart items array back to local storage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+            // Display a confirmation message (optional)
+            alert('Product added to cart!');
+        }
+    </script>
+</body>
+</html>
